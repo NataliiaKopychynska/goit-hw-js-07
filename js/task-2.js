@@ -33,4 +33,4 @@ const img = images
   )
   .join('');
 
-imgGalery.width = imgGalery.insertAdjacentHTML('afterbegin', img);
+imgGalery.insertAdjacentHTML('afterbegin', img);

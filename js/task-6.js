@@ -31,9 +31,14 @@ function clear() {
 let sizes = 30;
 
 create.addEventListener('click', createMarkup);
-destroy.addEventListener('click', () => {
+
+function clearAll() {
   boxes.innerHTML = '';
   clear();
+}
+
+destroy.addEventListener('click', () => {
+  clearAll();
 });
 
 function createMarkup() {
@@ -46,7 +51,7 @@ function createMarkup() {
 }
 
 function createBoxes(amount) {
-  clear();
+  clearAll();
 
   for (let i = 0; i < amount; i++) {
     const box = document.createElement('div');

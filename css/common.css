@@ -205,7 +205,7 @@ body > input {
 
 /* task 6 */
 
-div {
+#controls {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -214,11 +214,30 @@ div {
   border-radius: 8px;
   padding: 32px;
   margin: 16px;
-  min-width: 486px;
   background: #f6f6fe;
 }
 
-div > input {
+#boxes {
+  display: flex;
+  align-items: flex-start;
+
+  justify-content: flex-start;
+  flex-direction: row;
+  gap: 16px;
+  border-radius: 8px;
+  padding: 32px;
+  margin: 16px;
+  background: #f6f6fe;
+}
+
+#boxes > div {
+  display: flex;
+  min-width: 30px;
+  min-height: 30px;
+  flex-shrink: 0;
+}
+
+#controls > input {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -241,21 +260,21 @@ div > input {
   /* padding-left: 16px; */
 }
 
-div > input:hover {
+#controls > input:hover {
   border: 1px solid #000;
   border-radius: 4px;
   width: 360px;
   height: 40px;
 }
 
-div > input:active {
+#controls > input:active {
   border: 1px solid #808080;
   border-radius: 4px;
   width: 360px;
   height: 40px;
 }
 
-div > button {
+#controls > button {
   display: flex;
   align-items: center;
   justify-content: center;
