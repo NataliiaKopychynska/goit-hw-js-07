@@ -53,15 +53,21 @@ function createMarkup() {
 function createBoxes(amount) {
   clearAll();
 
+  // Використовуємо фрагмент для додавання всіх елементів за одну операцію
+  const fragment = document.createDocumentFragment();
+
   for (let i = 0; i < amount; i++) {
     const box = document.createElement('div');
     box.style.width = `${sizes}px`;
     box.style.height = `${sizes}px`;
     box.style.backgroundColor = getRandomHexColor();
 
-    boxes.append(box);
+    fragment.append(box);
     sizes += 10;
   }
+
+  // Додаємо всі елементи до DOM за одну операцію
+  boxes.append(fragment);
 }
 
 function getRandomHexColor() {

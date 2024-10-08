@@ -1,19 +1,15 @@
 const textInput = document.querySelector('#name-input');
-let changeName = document.querySelector('#name-output');
+const changeName = document.querySelector('#name-output');
 
-textInput.addEventListener('blur', event => {
-  changeName.inputValue = event.currentTarget.value.trim();
+textInput.addEventListener('input', event => {
+  const inputValue = event.currentTarget.value.trim(); // обрізаємо пробіли
 
   if (inputValue === '') {
-    changeName.textContent = 'Anonymous';
+    changeName.textContent = 'Anonymous'; // якщо поле порожнє
   } else {
-    changeName.textContent.replace(/\s/g, "") = inputValue;
+    changeName.textContent = inputValue.replace(/\s/g, ''); // видаляємо пробіли в середині тексту
   }
 });
-
-console.log([1, 2, 3, 4]);
-console.dir([1,2,3,4])
-
 
 // Аналіз критичного питання:
 
